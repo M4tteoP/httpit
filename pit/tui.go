@@ -198,7 +198,7 @@ func (t *tui) writeTotalRequest() {
 func (t *tui) writeElapsed() {
 	elapsed := time.Duration(atomic.LoadInt64(&t.elapsed))
 	_, _ = t.buf.WriteString("Elapsed:  ")
-	if elapsed > t.duration {
+	if elapsed > t.duration && t.duration != 0 { // TODO
 		elapsed = t.duration
 	}
 	t.writeFloat(elapsed.Seconds())

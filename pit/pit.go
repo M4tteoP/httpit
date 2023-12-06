@@ -47,9 +47,9 @@ func New(c Config) *Pit {
 		p.c.Connections = defaultConnections
 	}
 
-	if p.c.Duration <= 0 {
-		p.c.Duration = defaultDuration
-	}
+	// if p.c.Duration <= 0 {
+	// 	p.c.Duration = defaultDuration
+	// }
 
 	if p.c.Timeout <= 0 {
 		p.c.Timeout = defaultTimeout
